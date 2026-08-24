@@ -1,0 +1,1 @@
+console.log("Document Analyzer frontend loaded successfully.");

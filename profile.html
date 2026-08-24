@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile | DocAnalyzer</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                DocAnalyzer
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html">
+                    📊
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="upload.html">
+                    📄
+                    <span>Analyze Document</span>
+                </a>
+
+                <a href="history.html">
+                    🕘
+                    <span>History</span>
+                </a>
+
+                <a
+                    href="profile.html"
+                    class="active"
+                >
+                    👤
+                    <span>Profile</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="index.html">
+                    🚪
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+
+
+            <!-- Header -->
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>
+                        My Profile
+                    </h1>
+
+                    <p>
+                        Manage your account information.
+                    </p>
+
+                </div>
+                <button
+    type="button"
+    class="theme-toggle"
+    id="themeToggle"
+    aria-label="Toggle dark mode"
+>
+    🌙
+</button>
+
+            </header>
+
+
+            <!-- Profile Card -->
+            <section class="profile-card">
+
+                <div class="profile-avatar">
+                    U
+                </div>
+
+                <div class="profile-info">
+
+                    <h2>
+                        User
+                    </h2>
+
+                    <p>
+                        user@example.com
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Account Information -->
+            <section class="profile-section">
+
+                <div class="profile-section-header">
+
+                    <h2>
+                        Account Information
+                    </h2>
+
+                    <p>
+                        Your registered account details.
+                    </p>
+
+                </div>
+
+
+                <div class="profile-fields">
+
+                    <div class="profile-field">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            value="User"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            value="user@example.com"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Account Type
+                        </label>
+
+                        <input
+                            type="text"
+                            value="Standard User"
+                            readonly
+                        >
+
+                    </div>
+
+
+                    <div class="profile-field">
+
+                        <label>
+                            Member Since
+                        </label>
+
+                        <input
+                            type="text"
+                            value="August 2026"
+                            readonly
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Security -->
+            <section class="profile-section">
+
+                <div class="profile-section-header">
+
+                    <h2>
+                        Security
+                    </h2>
+
+                    <p>
+                        Manage your account security.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="changePasswordBtn"
+                >
+                    Change Password
+                </button>
+
+            </section>
+
+
+            <p
+                class="profile-note"
+                id="profileMessage"
+            ></p>
+
+        </main>
+
+    </div>
+
+
+    <script>
+
+        const changePasswordBtn =
+            document.getElementById("changePasswordBtn");
+
+        const profileMessage =
+            document.getElementById("profileMessage");
+
+
+        changePasswordBtn.addEventListener(
+            "click",
+            function () {
+
+                profileMessage.textContent =
+                    "Password change will be connected to the backend later.";
+
+            }
+        );
+
+    </script>
+    <script src="js/theme.js"></script>
+
+
+</body>
+
+</html>

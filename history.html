@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document History | DocAnalyzer</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                DocAnalyzer
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html">
+                    📊
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="upload.html">
+                    📄
+                    <span>Analyze Document</span>
+                </a>
+
+                <a href="history.html" class="active">
+                    🕘
+                    <span>History</span>
+                </a>
+
+                <a href="profile.html">
+                    👤
+                    <span>Profile</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="index.html">
+                    🚪
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+
+            <!-- Header -->
+<header class="dashboard-header">
+
+    <div>
+
+        <h1>
+            Document History
+        </h1>
+
+        <p>
+            View your previously analyzed documents.
+        </p>
+
+    </div>
+
+    <div class="header-actions">
+
+        <!-- Dark Mode Toggle -->
+        <button
+            type="button"
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+        >
+            🌙
+        </button>
+
+        <a
+            href="upload.html"
+            class="btn btn-primary"
+        >
+            + Analyze Document
+        </a>
+
+    </div>
+
+</header>
+
+
+            <!-- History Card -->
+            <section class="history-card">
+
+                <div class="history-header">
+
+                    <div>
+
+                        <h2>
+                            Recent Analyses
+                        </h2>
+
+                        <p>
+                            Your previous document analysis results.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- History List -->
+                <div class="history-list">
+
+
+                    <!-- Record 1 -->
+                    <div class="history-item">
+
+                        <div class="history-document">
+
+                            <div class="history-file-icon">
+                                📄
+                            </div>
+
+                            <div class="history-file-details">
+
+                                <h3>
+                                    nptl(payment).pdf
+                                </h3>
+
+                                <p>
+                                    PDF • 208.33 KB
+                                </p>
+
+                                <span>
+                                    Analyzed on 09 Aug 2026
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="history-result suspicious-result">
+
+                            <strong>
+                                78%
+                            </strong>
+
+                            <span>
+                                Suspicious
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="result.html"
+                            class="history-view"
+                        >
+                            View
+                        </a>
+                        <button
+    type="button"
+    class="delete-history"
+    aria-label="Delete history item"
+    title="Delete analysis"
+>
+    🗑️
+</button>
+
+                    </div>
+
+
+                    <!-- Record 2 -->
+                    <div class="history-item">
+
+                        <div class="history-document">
+
+                            <div class="history-file-icon">
+                                📄
+                            </div>
+
+                            <div class="history-file-details">
+
+                                <h3>
+                                    certificate.pdf
+                                </h3>
+
+                                <p>
+                                    PDF • 512.20 KB
+                                </p>
+
+                                <span>
+                                    Analyzed on 08 Aug 2026
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="history-result safe-result">
+
+                            <strong>
+                                18%
+                            </strong>
+
+                            <span>
+                                Low Risk
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="result.html"
+                            class="history-view"
+                        >
+                            View
+                        </a>
+                        <button
+    type="button"
+    class="delete-history"
+    aria-label="Delete history item"
+    title="Delete analysis"
+>
+    🗑️
+</button>
+
+                    </div>
+
+
+                    <!-- Record 3 -->
+                    <div class="history-item">
+
+                        <div class="history-document">
+
+                            <div class="history-file-icon">
+                                📄
+                            </div>
+
+                            <div class="history-file-details">
+
+                                <h3>
+                                    identity-document.jpg
+                                </h3>
+
+                                <p>
+                                    JPG • 1.24 MB
+                                </p>
+
+                                <span>
+                                    Analyzed on 07 Aug 2026
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="history-result suspicious-result">
+
+                            <strong>
+                                64%
+                            </strong>
+
+                            <span>
+                                Suspicious
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="result.html"
+                            class="history-view"
+                        >
+                            View
+                        </a>
+                        <button
+    type="button"
+    class="delete-history"
+    aria-label="Delete history item"
+    title="Delete analysis"
+>
+    🗑️
+</button>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- Empty state note -->
+            <p class="history-note">
+
+                Analysis history will be connected to the backend
+                and database later.
+
+            </p>
+
+            </main>
+
+</div>
+
+<script src="js/history.js"></script>
+<script src="js/theme.js"></script>
+
+</body>
+
+</html>

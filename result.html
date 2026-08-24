@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analysis Result | DocAnalyzer</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                DocAnalyzer
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html">
+                    📊
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="upload.html">
+                    📄
+                    <span>Analyze Document</span>
+                </a>
+
+                <a href="history.html">
+                    🕘
+                    <span>History</span>
+                </a>
+
+                <a href="profile.html">
+                    👤
+                    <span>Profile</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="index.html">
+                    🚪
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>
+                        Analysis Result
+                    </h1>
+
+                    <p>
+                        Review the document analysis.
+                    </p>
+
+                </div>
+                <button
+    type="button"
+    class="theme-toggle"
+    id="themeToggle"
+    aria-label="Toggle dark mode"
+>
+    🌙
+</button>
+
+            </header>
+
+
+            <!-- Result Summary -->
+            <section class="result-summary">
+
+                <div class="result-document">
+
+                    <div class="result-file-icon">
+                        📄
+                    </div>
+
+                    <div>
+
+                        <h2 id="resultFileName">
+                            Document
+                        </h2>
+
+                        <p>
+                            Document analysis completed
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="risk-result">
+
+                    <div class="risk-score">
+                        78%
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Suspicious
+                        </strong>
+
+                        <p>
+                            Risk Score
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Result Explanation -->
+            <section class="result-card">
+
+                <div class="section-title">
+
+                    <div>
+
+                        <h2>
+                            Analysis Overview
+                        </h2>
+
+                        <p>
+                            Indicators detected during document analysis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="indicator-list">
+
+                    <div class="indicator suspicious-indicator">
+
+                        <div class="indicator-icon">
+                            ⚠
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Metadata inconsistency
+                            </strong>
+
+                            <p>
+                                Document metadata contains unusual
+                                or inconsistent information.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="indicator suspicious-indicator">
+
+                        <div class="indicator-icon">
+                            ⚠
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Formatting inconsistency
+                            </strong>
+
+                            <p>
+                                Some formatting characteristics
+                                differ from the surrounding document.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="indicator safe-indicator">
+
+                        <div class="indicator-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Text extraction successful
+                            </strong>
+
+                            <p>
+                                Text was successfully extracted from
+                                the uploaded document.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="indicator safe-indicator">
+
+                        <div class="indicator-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                File integrity check passed
+                            </strong>
+
+                            <p>
+                                No basic file corruption was detected.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Score Explanation -->
+            <section class="result-card">
+
+                <h2>
+                    Risk Assessment
+                </h2>
+
+                <div class="risk-bar-container">
+
+                    <div class="risk-bar">
+
+                        <div
+                            class="risk-bar-fill"
+                            style="width: 78%;"
+                        ></div>
+
+                    </div>
+
+                    <div class="risk-labels">
+
+                        <span>
+                            Low
+                        </span>
+
+                        <span>
+                            Suspicious
+                        </span>
+
+                        <span>
+                            High
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <p class="result-disclaimer">
+
+                    This result is an automated assessment intended
+                    to assist human review. It should not be treated
+                    as independent proof that a document is fraudulent.
+
+                </p>
+
+            </section>
+
+
+            <!-- Actions -->
+            <section class="result-actions">
+
+                <a
+                    href="upload.html"
+                    class="btn btn-primary"
+                >
+                    Analyze Another Document
+                </a>
+
+                <a
+                    href="dashboard.html"
+                    class="btn btn-secondary"
+                >
+                    Back to Dashboard
+                </a>
+
+            </section>
+
+        </main>
+
+    </div>
+        <script src="js/result.js"></script>
+        <script src="js/theme.js"></script>
+
+</body>
+
+</html>

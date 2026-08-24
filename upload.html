@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analyze Document | DocAnalyzer</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                DocAnalyzer
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html">
+                    📊
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="upload.html" class="active">
+                    📄
+                    <span>Analyze Document</span>
+                </a>
+
+                <a href="history.html">
+                    🕘
+                    <span>History</span>
+                </a>
+
+                <a href="profile.html">
+                    👤
+                    <span>Profile</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="index.html">
+                    🚪
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main -->
+        <main class="dashboard-main">
+
+            <!-- Header -->
+<header class="dashboard-header">
+
+    <div>
+
+        <h1>
+            Analyze Document
+        </h1>
+
+        <p>
+            Upload a document to begin the analysis.
+        </p>
+
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button
+        type="button"
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle dark mode"
+        title="Toggle dark mode"
+    >
+        🌙
+    </button>
+
+</header>
+
+
+            <!-- Upload Card -->
+            <section class="upload-container">
+
+                <div class="upload-card">
+
+                    <div class="upload-icon">
+                        📄
+                    </div>
+
+                    <h2>
+                        Upload Your Document
+                    </h2>
+
+                    <p>
+                        Select a PDF or image file for analysis.
+                    </p>
+
+
+                    <!-- File Upload Area -->
+                    <label
+                        for="documentFile"
+                        class="upload-area"
+                        id="uploadArea"
+                    >
+
+                        <div class="upload-area-icon">
+                            ⬆️
+                        </div>
+
+                        <h3>
+                            Click to select a document
+                        </h3>
+
+                        <p>
+                            Supported formats: PDF, JPG, JPEG, PNG
+                        </p>
+
+                        <p class="upload-limit">
+                            Maximum file size: 10 MB
+                        </p>
+
+                        <input
+                            type="file"
+                            id="documentFile"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            hidden
+                        >
+
+                    </label>
+
+
+                    <!-- Selected File -->
+                    <div
+                        id="fileInfo"
+                        class="file-info hidden"
+                    >
+
+                        <div class="file-icon">
+                            📄
+                        </div>
+
+                        <div class="file-details">
+
+                            <strong id="fileName">
+                                document.pdf
+                            </strong>
+
+                            <span id="fileSize">
+                                0 MB
+                            </span>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            id="removeFile"
+                            class="remove-file"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <!-- Error -->
+                    <div
+                        id="uploadError"
+                        class="form-error"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <!-- Analyze Button -->
+                    <button
+                        type="button"
+                        id="analyzeButton"
+                        class="btn btn-primary upload-button"
+                        disabled
+                    >
+                        Analyze Document
+                    </button>
+
+
+                    <p class="upload-note">
+                        Your document will be analyzed for
+                        suspicious indicators. Results are
+                        intended for review and do not independently
+                        establish fraud.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/upload.js"></script>
+    <script src="js/theme.js"></script>
+
+</body>
+</html>
