@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *.pyo
 
-# Virtual environment
+# Virtual environments
 venv/
 .venv/
 env/
@@ -12,8 +12,11 @@ env/
 .env
 .env.*
 
-# Test/local files
+# Local test documents
 test_documents/
+
+# Temporary uploads
+temporary_uploads/
 
 # IDE
 .vscode/
