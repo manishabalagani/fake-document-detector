@@ -152,3 +152,37 @@ analyzeButton.addEventListener("click", function () {
     window.location.href = "result.html";
 
 });
+analyzeButton.addEventListener("click", async function () {
+
+    try {
+
+        analyzeButton.textContent = "Analyzing...";
+        analyzeButton.disabled = true;
+
+        // Call backend
+        const result = await analyzeDocument(selectedFile);
+
+        console.log("Backend result:", result);
+
+        // Save result temporarily
+        localStorage.setItem(
+            "analysisResult",
+            JSON.stringify(result)
+        );
+
+        // Go to result page
+        window.location.href = "result.html";
+
+    } catch (error) {
+
+        console.error(error);
+
+        uploadError.textContent =
+            "Unable to analyze the document. Please try again.";
+
+        analyzeButton.textContent =
+            "Analyze Document";
+
+        analyzeButton.disabled = false;
+    }
+});
