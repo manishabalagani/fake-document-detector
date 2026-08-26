@@ -18,7 +18,7 @@ const analyzeDocument = async (document) => {
         document.originalName
     );
 
-    const response = await fetch(`${serviceUrl.replace(/\\/$/, "")}/analyze`, {
+    const response = await fetch(`${serviceUrl}/analyze`, {
         method: "POST",
         body: form,
         signal: AbortSignal.timeout(120000)
