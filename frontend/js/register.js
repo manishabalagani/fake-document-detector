@@ -1,52 +1,87 @@
 const registerForm = document.getElementById("registerForm");
 const registerError = document.getElementById("registerError");
 
-registerForm.addEventListener("submit", function (event) {
+if (registerForm) {
 
-    event.preventDefault();
+    registerForm.addEventListener("submit", async function (event) {
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value;
-    const confirmPassword =
-        document.getElementById("confirmPassword").value;
+        event.preventDefault();
 
-    registerError.textContent = "";
+        registerError.textContent = "";
 
-
-    // Check empty fields
-    if (!name || !email || !password || !confirmPassword) {
-
-        registerError.textContent =
-            "Please fill in all fields.";
-
-        return;
-    }
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+            document.getElementById("confirmPassword").value;
 
 
-    // Check password length
-    if (password.length < 6) {
+        // Check empty fields
+        if (!name || !email || !password || !confirmPassword) {
 
-        registerError.textContent =
-            "Password must be at least 6 characters.";
+            registerError.textContent =
+                "Please fill in all fields.";
 
-        return;
-    }
-
-
-    // Check password match
-    if (password !== confirmPassword) {
-
-        registerError.textContent =
-            "Passwords do not match.";
-
-        return;
-    }
+            return;
+        }
 
 
-    // Temporary testing
-    console.log("Registration form submitted.");
-    console.log("Name:", name);
-    console.log("Email:", email);
+        // Check password length
+        if (password.length < 6) {
 
-});
+            registerError.textContent =
+                "Password must be at least 6 characters.";
+
+            return;
+        }
+
+
+        // Check password match
+        if (password !== confirmPassword) {
+
+            registerError.textContent =
+                "Passwords do not match.";
+
+            return;
+        }
+
+
+        const registerButton =
+            registerForm.querySelector("button[type='submit']");
+
+
+        try {
+
+            registerButton.disabled = true;
+            registerButton.textContent = "Creating Account...";
+
+
+            // Send registration request to backend
+            const response =
+                await registerUser(name, email, password);
+
+
+            console.log("Registration response:", response);
+
+
+            // Registration successful
+            alert("Account created successfully! Please login.");
+
+            window.location.href = "login.html";
+
+
+        } catch (error) {
+
+            console.error("Registration error:", error);
+
+            registerError.textContent =
+                error.message ||
+                "Registration failed. Please try again.";
+
+            registerButton.disabled = false;
+            registerButton.textContent = "Create Account";
+        }
+
+    });
+
+}
